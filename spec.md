@@ -143,6 +143,17 @@ Need variable for defining text colour for lable, input and terms
 Need variable for defining background colour
 Need variable for defining terms text colour
 ```
+
+## Test Cases
+- Component should work across all major browsers - Chrome / Mozilla / Safari / Opera / IE etc.
+
+## Steps to Start
+- Set Github repository at your end for this project, we will merge them later
+- You can use Google/Vaadin's elements (like calender element and textboxes etc.)
+
+## Performance standard
+- Any component if opened via [web page tester](https://www.webpagetest.org/), it should load under 500ms (milli seconds).
+
 ## Documents
 - Visual designs for components - https://projects.invisionapp.com/share/6E9PJ7R4Q#/screens/228211081
 - API access : Url - http://demo.travelnxt.com/dev

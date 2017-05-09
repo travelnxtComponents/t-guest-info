@@ -148,6 +148,18 @@ Need variable for defining terms text colour
 - Component should work across all major browsers - Chrome / Mozilla / Safari / Opera / IE etc.
 - Verify all exposed public properties are working independently and with complex combination.
 - Verify all exposed methods and events are working.
+- Same set of code should work across three views i.e. Desktop/ Tablet and Mobile
+- Validations should work for Mandatory fields
+- User-info component should work separately for single and mult passengers.
+- User-info component items are - Header stripe, 2 line placeholder, title, firstname, lastname, email, contact code and phone.
+- "2 line placeholder" -If no content givem, system should handle the space/alignment.
+- Header stipe will display- Room name, bed type and occupany.
+- Adult 1, Adult 2.... label will appear only if multiple passenger information is required.
+- All pax information required data will be provided by APIs
+- "Choose guest" dropdown will be available from room 2 and will popluate the passengers list entered in room 1 & so on to other rooms.
+- After selection of guest from dropdown will started showing information with cross icon and click on cross will reset to previous position
+- All label like Adult 1 (12+ yrs), child 1 (< 11 yrs) etc. and validation error messages will be managed from resources.
+- For now user info compoenent is showing Title, first and last name in single line but suppose some business owner don't want to capture "title" in user-info, In that case business owner can hide "title" field and "first" & "last" name field should equally distribute the vacant position. Similar behavior applies to other fields.
 
 ## Steps to Start
 - Set Github repository at your end for this project, we will merge them later

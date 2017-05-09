@@ -155,9 +155,9 @@ Need variable for defining terms text colour
 - "2 line placeholder" -If no content givem, system should handle the space/alignment.
 - Header stipe will display- Room name, bed type and occupany.
 - Adult 1, Adult 2.... label will appear only if multiple passenger information is required.
-- All pax information required data will be provided by APIs
+- When to capture all passengers information will be derived form APIs.
 - "Choose guest" dropdown will be available from room 2 and will popluate the passengers list entered in room 1 & so on to other rooms.
-- After selection of guest from dropdown will started showing information with cross icon and click on cross will reset to previous position
+- After selection of guest from dropdown will show information in expanded view with cross icon and click on cross will reset to previous position
 - All label like Adult 1 (12+ yrs), child 1 (< 11 yrs) etc. and validation error messages will be managed from resources.
 - For now user info compoenent is showing Title, first and last name in single line but suppose some business owner don't want to capture "title" in user-info, In that case business owner can hide "title" field and "first" & "last" name field should equally distribute the vacant position. Similar behavior applies to other fields.
 

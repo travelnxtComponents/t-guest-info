@@ -5,7 +5,7 @@
 <t-passenger-info data=[[data]] resources=[[resources]] settings=[[settings]]>
 </t-passenger-info>
 ```
-
+ 
 ### Settings
 ```javascript
 {

@@ -31,7 +31,7 @@
                 {
                     "id" : "ypHtxnfawEWvbhtBo2ZKOw",
                     "name": "Deluxe room",
-                    /*if this property value false, then need pax details for all passenger*
+                    /*if this property value false, then need pax details for all passenger*/
                     "onlyLeadPaxInfo" : true,
                     "criteria" : {
                         "checkIn" : "05/22/2017",

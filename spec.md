@@ -1,7 +1,7 @@
 # t-guest-info Specification
 
 ### Component Use
-```javascript
+```html
     <t-passenger-group
              pax-list = {{paxList}}
             product-list=[[product-list]]

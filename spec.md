@@ -2,53 +2,70 @@
 
 ### Component Use
 ```javascript
-<t-passenger-info data=[[data]] resources=[[resources]] settings=[[settings]]>
-</t-passenger-info>
-```
- 
-### Settings
-```javascript
-{
-    "showAllPaxDetails": false,
-    "ëmailRegEx":"",
-    "code":"pax1",
-    "maxInputLength":100
-}
+    <t-passenger-group
+             pax-list = {{paxList}}
+            product-list=[[product-list]]
+            resources=[[resources]] >
+    </t-passenger-group>
+
+    <t-passenger-info 
+                allow-contact-number
+                allow-email
+                allow-loyalty
+                >
+    </t-passenger-info>
+    
+    <t-loyalty-group>
+    </t-loyalty-group>
+
 ```
 
-### Data
-```javascript
-{
-    "title": "Room 1",
-    "subTitle": " - Strip View, 1 King Bed | 2 Adults, 2 children",
-    "terms": [
-        "FREE cancellation before 11:59 on April 25,2017",
-        "You can cancel or change for free."
-    ],
-    "paxDetails": [
-        {
-            "title": "",
-            "firstName": "",
-            "lastName": "",
-            "type": "Adult"
-        },
-        {
-            "title": "",
-            "firstName": "",
-            "lastName": "",
-            "type": "Child"
-        }
-    ],
-    "contactInfo": {
-        "email": "",
-        "countryCode": "",
-        "phone": ""
+## Property Details
+### Product List
+```json
+[
+    {
+        "id" : "123123",
+        "name" : "El Cortez Hotel &amp; Casino",        
+        "rooms" : [
+                {
+                    "id" : "ypHtxnfawEWvbhtBo2ZKOw",
+                    "name": "Deluxe room",
+                    "criteria" : {
+                        "checkIn" : "05/22/2017",
+                        "checkOut" : "05/28/2017",
+                        "stayDuration" : 2,
+                        "traveller" : {
+                            "adult" : 2,
+                            "child" : 1
+                        }
+                    }
+                }
+        ],
+        "policies" : [
+                "FREE cancellation before 11:59PM on April 25, 2017"
+        ]
     }
-}
+]
 ```
+### Pax List
+```json
+[
+    {
+        "type" : "Adult",
+        "title" : "Mr",
+        "firstName" : "John",
+        "lastName" : "Doe",
+        "email" : "john@example.com",
+        "contact" : "343453453",
+        "contactCode" : "+91"
+    }
+]
+```
+
 
 ### Resources
-```javascript
+```json
 {
     "icons": {
         "terms": "terms-ico"

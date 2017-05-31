@@ -11,8 +11,7 @@
     <t-passenger-info 
                 allow-contact-number
                 allow-email
-                allow-loyalty
-                >
+                            >
     </t-passenger-info>
     
     <t-loyalty-group pax-list=[[productPaxList]]>
@@ -26,7 +25,11 @@
 [
     {
         "id" : "123123",
-        "name" : "El Cortez Hotel &amp; Casino",        
+        "name" : "El Cortez Hotel &amp; Casino",
+        
+        // if true, then display the loyalty section
+        "allowLoyalty": ture,
+        
         "rooms" : [
                 {
                     "id" : "ypHtxnfawEWvbhtBo2ZKOw",

@@ -15,7 +15,7 @@
                 >
     </t-passenger-info>
     
-    <t-loyalty-group>
+    <t-loyalty-group pax-list=[[productPaxList]]>
     </t-loyalty-group>
 
 ```

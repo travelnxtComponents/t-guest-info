@@ -8,14 +8,18 @@
  resources=[[resources]] >
  t-passenger-group>
 
- <t-passenger-info allow-contact-number
+ <t-passenger-info 
+ allow-contact-number
  allow-email
- >
- t-passenger-info>
-     <t-loyalty-group panelist=[[productPaxList]]>
- t-loyalty-group>
+ /t-passenger-info>
+ 
+ <t-loyalty-group 
+ 
+ panelist=[[productPaxList]]
+ 
+ /t-loyalty-group>
 
-```javascript
+```
 
 ## Property Details
 ### Product List

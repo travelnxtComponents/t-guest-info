@@ -2,56 +2,67 @@
 
 ### Component Use
 ```javascript
- <t-passenger-group
- panelist = {{paxList}}
- product-list=[[product-list]]
- resources=[[resources]] >
- t-passenger-group>
+   <t-product-passengers  
+                pax-list = {{paxList}}
+                product =  [[product]]
+                resource = [[resource]]
+                option = [[option]]
+                    >
+  </t-product-passengers>
 
- <t-passenger-info 
- allow-contact-number
- allow-email
- /t-passenger-info>
- 
- <t-loyalty-group 
- 
- panelist=[[productPaxList]]
- 
- /t-loyalty-group>
 
 ```
 
 ## Property Details
-### Product List
+
+#### Option
+
+```json
+    {
+        "allowContactNumber" : false,
+        "allowContactNumberForLeadPax" : false,
+        "allowEmail" : false,
+        "allowEmailForLeadPax" : false,
+        "requiredField" : [
+            "firstname",
+            "lastname"
+        ],
+        "requiredFieldForLeadPax" : [
+            "contactNumber",
+            "title",
+            "email"
+        ]
+    }
+```
+
+#### Product
 ```javascript
-[
- {
- "id" : "123123",
- "name" : "El Cortez Hotel &; Casino",
-         // if true, then display the loyalty section
- "allowLoyalty": ture,
-         "rooms" : [
- {
- "id" : "ypHtxnfawEWvbhtBo2ZKOw",
- "name": "Deluxe room",
-                     //if this property value false, then need pax details for all passenger
- "onlyLeadPaxInfo" : true,
- "criteria" : {
- "checkIn" : "05/22/2017",
- "checkout" : "05/28/2017",
- "stayDuration" : 2,
- "traveler" : {
- "adult" : 2,
- "child" : 1
- }
- }
- }
- ],
- "policies" : [
- "FREE cancellation before 11:59PM on April 25, 2017"
- ]
- }
-]
+    {
+        "id": "123123",
+        "name": "El Cortez Hotel &; Casino",
+        // if true, then display the loyalty section
+        "allowLoyalty": ture,
+        "rooms": [
+            {
+                "id": "ypHtxnfawEWvbhtBo2ZKOw",
+                "name": "Deluxe room",
+                //if this property value false, then need pax details for all passenger
+                "onlyLeadPaxInfo": true,
+                "criteria": {
+                    "checkIn": "05/22/2017",
+                    "checkout": "05/28/2017",
+                    "stayDuration": 2,
+                    "traveler": {
+                        "adult": 2,
+                        "child": 1
+                    }
+                }
+            }
+        ],
+        "policies": [
+            "FREE cancellation before 11:59PM on April 25, 2017"
+        ]
+    }
 ```
 ### Pax List
 ```javascript
@@ -72,78 +83,103 @@
 ### Resources
 ```javascript
 {
- "icons": {
- "terms": "terms-ico"
- },
- "labels": {
- "adult": {
- "title": "Adult {count}",
- "info": "(12+ years)"
- },
- "child": {
- "title": "Child {count}",
- "info": "(upto 7 years)"
- }
- },
- "fields": {
- "title": {
- "values": [
- {
- "key": "Mr"
- },
- {
- "key": "Ms"
- }
- ],
- "selected": "Mr",
- "title": "Title",
- "errors": "Please select a title",
- },
- "firstName": {
- "value": "",
- "title": "First name",
- "errors": "Firstname is required",
- },
- "lastName": {
- "value": "",
- "title": "Last name",
- "errors": "Lastname is required",
- },
- "email": {
- "value": "",
- "title": "Email address",
- "info": "We'll send you email confirmation on this address",
- "errors": "Please enter a valid email address",
- },
- "countryCode": {
- "values": [
- {
- "key": "India +91",
- "value": "91"
- },
- {
- "key": "USA +1",
- "value": "1"
- }
- ],
- "title": "Country code",
- "errors": "Countrycode is required",
- },
- "contactNumber": {
- "value": "",
- "title": "Contact number",
- "info": "In case of any notifications our agent will reach you on this number",
- "errors": "Contact number is required",
- }
- }
+    "icons": {
+        "terms": "terms-ico"
+    },
+    "labels": {
+        "adult": {
+            "title": "Adult {count}",
+            "info": "(12+ years)"
+        },
+        "child": {
+            "title": "Child {count}",
+            "info": "(upto 7 years)"
+        }
+    },
+    "fields": {
+        "title": {
+            "values": [
+                {
+                    "key": "Mr"
+                },
+                {
+                    "key": "Ms"
+                }
+            ],
+            "selected": "Mr",
+            "title": "Title",
+            "errors": "Please select a title",
+        },
+        "firstName": {
+            "value": "",
+            "title": "First name",
+            "errors": "Firstname is required",
+        },
+        "lastName": {
+            "value": "",
+            "title": "Last name",
+            "errors": "Lastname is required",
+        },
+        "email": {
+            "value": "",
+            "title": "Email address",
+            "info": "We'll send you email confirmation on this address",
+            "errors": "Please enter a valid email address",
+        },
+        "countryCode": {
+            "values": [
+                {
+                    "key": "India +91",
+                    "value": "91"
+                },
+                {
+                    "key": "USA +1",
+                    "value": "1"
+                }
+            ],
+            "title": "Country code",
+            "errors": "Countrycode is required",
+        },
+        "contactNumber": {
+            "value": "",
+            "title": "Contact number",
+            "info": "In case of any notifications our agent will reach you on this number",
+            "errors": "Contact number is required",
+        }
+    }
 }
 ```
 
 
 ### Methods
 ```javascript
-invalid() - returns Boolean as per validation status
-gestate() - returns current passenger info state object as data setState("<data object>") - set current passenger info state “`
+// returns Boolean as per validation status
+isValid()
+
+// Returns current passenger info state object `
+geState() => Return following pax list in following formate 
+
+    [{
+        propductId : "1123",
+        roomId : "123",
+        paxList : [
+            {
+                firstName : "john",
+                lastName  : "doe",
+                phone : "234234",
+                email : "john@gmail.com",
+                membership : [
+                    {
+                        programName : "",
+                        programCode : "",
+                        number : ""
+                    }
+                ]
+            }
+        ]
+    }]
+
+
 ```
 ### Events
 ```javascript

@@ -1,7 +1,7 @@
 # t-guest-info Specification
 
 ### Component Use
-“`html
+```javascript
  <t-passenger-group
  panelist = {{paxList}}
  product-list=[[product-list]]
@@ -15,11 +15,11 @@
      <t-loyalty-group panelist=[[productPaxList]]>
  t-loyalty-group>
 
-“`
+```javascript
 
 ## Property Details
 ### Product List
-“`json
+```javascript
 [
  {
  "id" : "123123",
@@ -48,9 +48,9 @@
  ]
  }
 ]
-“`
+```
 ### Pax List
-“`json
+```javascript
 [
  {
  "type" : "Adult",
@@ -62,11 +62,11 @@
  "contactCode" : "+91"
  }
 ]
-“`
+```
 
 
 ### Resources
-“`json
+```javascript
 {
  "icons": {
  "terms": "terms-ico"
@@ -133,31 +133,30 @@
  }
  }
 }
-“`
+```
 
 
 ### Methods
-“`JavaScript
+```javascript
 invalid() - returns Boolean as per validation status
 gestate() - returns current passenger info state object as data setState("<data object>") - set current passenger info state “`
-
+```
 ### Events
-“`JavaScript
+```javascript
 Fired when invalid is called or in response to t-passenger-info-validate event t-passenger-info-status - {"invalid":true,"code":"pax1"}
-“`
-
+```
 ### Listen
-“`JavaScript
+```javascript
 t-passenger-info-validate - {}} //this will trigger validation in component
-“`
+```
 
 
 ### Styles
-“`javascript
+```javascript
 Need variable for defining text color for label, input and terms
 Need variable for defining background color
 Need variable for defining terms text color
-“`
+```
 
 ## Test Cases
 - Component should work across all major browsers - Chrome / Mozilla / Safari / Opera / IE etc.

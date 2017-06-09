@@ -179,6 +179,9 @@ geState() => Return following pax list in following formate
         ]
     }]
 
+// this method will prepopulated product or room passenger data with given state
+setState(paxList)
+
 
 ```
 ### Events

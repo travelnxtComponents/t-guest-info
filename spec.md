@@ -159,25 +159,31 @@ isValid()
 // Returns current passenger info state object `
 geState() => Return following pax list in following formate 
 
-    [{
+    {
         propductId : "1123",
-        roomId : "123",
-        paxList : [
+
+        room : [
             {
-                firstName : "john",
-                lastName  : "doe",
-                phone : "234234",
-                email : "john@gmail.com",
-                membership : [
+                roomId : "123",
+                paxList : [
                     {
-                        programName : "",
-                        programCode : "",
-                        number : ""
+                        firstName : "john",
+                        lastName  : "doe",
+                        phone : "234234",
+                        email : "john@gmail.com",
+                        membership : [
+                            {
+                                programName : "",
+                                programCode : "",
+                                number : ""
+                            }
+                        ]
                     }
                 ]
             }
         ]
-    }]
+        
+    }
 
 // this method will prepopulated product or room passenger data with given state
 setState(paxList)

@@ -1,19 +1,38 @@
 # t-guest-info Specification
 
 ### Component Use
-```javascript
+```html
+   
+   <!-- Main Component -  -->
    <t-product-passengers  
                 pax-list = {{paxList}}
                 product =  [[product]]
                 resource = [[resource]]
-                option = [[option]]
-                    >
+                option = [[option]] >
   </t-product-passengers>
 
+  <!-- Above component will internally use below component to take the passenger input. Below component will be generic for all product Hotel, Car, Activity -->
+  <t-passenger-container
+             title = "Room 1"
+             sub-title = "Strip View, 1 King Bed | 2 Adult 2 children"
+             policy-list = [[policyList]]
+             pax-list = {{paxList}}
+             option = [[option]]
+             resource = [[resource]]
+             adult-pax-count = 2        
+             child-pax-count = 1
+             >
+  <t-passenger-container>
+
+  <!-- Where - 
+        adult-pax-count & child-pax-count = this indicate how many passenger input section should be render.
+        -->
 
 ```
 
-## Property Details
+
+
+## _t-product-passengers_ Property Details
 
 #### Option
 
@@ -151,8 +170,26 @@
 }
 ```
 
+## _t-passenger-container_ Property Details
+The properties *option*, *resource* and *pax-list* will be same as _t-product-passengers_ component.
+#### _title_ & _sub-title_
+String value for title & subtitle.
 
-### Methods
+#### _policy-list_
+Display list of polices before passenger section
+
+```json
+    [
+        "FREE cancellation before 11:59PM on April 25, 2017",
+        "You can cancel or change your booking easily for free!"
+    ]
+```
+
+#### _adult-pax-count_ and _child-pax-count_
+This two properties indicate how many passenger section should be render in container.
+
+
+## Methods
 ```javascript
 // returns Boolean as per validation status
 isValid()

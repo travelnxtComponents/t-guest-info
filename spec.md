@@ -57,10 +57,11 @@
                         "child": 1
                     }
                 }
+                ,
+                 "policies": [
+                     "FREE cancellation before 11:59PM on April 25, 2017"
+                 ]
             }
-        ],
-        "policies": [
-            "FREE cancellation before 11:59PM on April 25, 2017"
         ]
     }
 ```

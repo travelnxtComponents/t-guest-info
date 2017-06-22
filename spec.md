@@ -49,7 +49,7 @@
         "name": "El Cortez Hotel &; Casino",
         "type" : "hotel",
         // if true, then display the loyalty section
-        "allowLoyalty": ture,
+        "allowLoyalty": true,
         
         "rooms": [
             {

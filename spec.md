@@ -4,12 +4,15 @@
 ```html
    
    <!-- Main Component -  -->
-   <t-product-guest-info  
+   <t-product-traveler-details  
                 pax-list = {{paxList}}
                 product =  [[product]]
                 resource = [[resource]]
                 option = [[option]] >
-  </t-product-guest-info>
+                
+                <t-product-summary slot="tripsummary"></t-product-summary>
+                
+  </t-product-traveler-details>
 
  <!-- This component will use the t-traveler-info component for get passenger details -->
 
@@ -44,8 +47,10 @@
     {
         "id": "123123",
         "name": "El Cortez Hotel &; Casino",
+        "type" : "hotel",
         // if true, then display the loyalty section
         "allowLoyalty": ture,
+        
         "rooms": [
             {
                 "id": "ypHtxnfawEWvbhtBo2ZKOw",
@@ -120,23 +125,23 @@
             ],
             "selected": "Mr",
             "title": "Title",
-            "errors": "Please select a title",
+            "error": "Please select a title",
         },
         "firstName": {
             "value": "",
             "title": "First name",
-            "errors": "Firstname is required",
+            "error": "Firstname is required",
         },
         "lastName": {
             "value": "",
             "title": "Last name",
-            "errors": "Lastname is required",
+            "error": "Lastname is required",
         },
         "email": {
             "value": "",
             "title": "Email address",
             "info": "We'll send you email confirmation on this address",
-            "errors": "Please enter a valid email address",
+            "error": "Please enter a valid email address",
         },
         "countryCode": {
             "values": [
@@ -150,15 +155,18 @@
                 }
             ],
             "title": "Country code",
-            "errors": "Countrycode is required",
+            "error": "Countrycode is required",
         },
         "contactNumber": {
             "value": "",
             "title": "Contact number",
             "info": "In case of any notifications our agent will reach you on this number",
-            "errors": "Contact number is required",
+            "error": "Contact number is required",
         }
-    }
+    },
+    
+    "newGuest" : "New Guest"
+
 }
 ```
 

@@ -1,4 +1,4 @@
-# t-guest-info Specification
+# t-product-traveler-details Specification
 
 ### Component Use
 ```html

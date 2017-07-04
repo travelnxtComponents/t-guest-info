@@ -228,10 +228,10 @@ Need variable for defining terms text color
 - Validations should work for Mandatory fields
 - User-info component should work separately for single and multi passengers.
 - User-info component items are - Header stripe, 2 line placeholders, title, first name, last name, email, contact code and phone.
-- "2 line placeholder" -If no content given, system should handle the space/alignment.
+- "2 line placeholder" -If no content available to display, system should handle the space/alignment.
 - Header stripe will display- Room name, bed type and occupancy.
 - Adult 1, Adult 2.... label will appear only if multiple passenger information is required.
-- When to capture all passengers' information will be derived form APIs.
+- When to capture all passengers' information will be derived form APIs. [ If allpaxinforrequired flag is true, then ask for all other wise only lead guest]
 - "Choose guest" drop down will be available from room 2 and will populate the passengers list entered in room 1 & so on to other rooms.
 - After selection of guest from drop down will show information in expanded view with cross icon and click on cross will reset to previous position
 - All label like Adult 1 (12+ yrs), child 1 (< 11 yrs) etc. and validation error messages will be managed from resources.

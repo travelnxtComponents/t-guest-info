@@ -165,7 +165,8 @@
         }
     },
     
-    "newGuest" : "New Guest"
+    "newGuest" : "New Guest",
+    "loyaltyProgram" : "Loyalty program (optional)"
 
 }
 ```
